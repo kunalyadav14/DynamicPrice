@@ -18,7 +18,7 @@ namespace DynamicPrice.Data
         {
         }
 
-        public   virtual DbSet<CexDatum> CexData { get; set; } 
+        public   virtual DbSet<CexDatum> Dynamicprice { get; set; } 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

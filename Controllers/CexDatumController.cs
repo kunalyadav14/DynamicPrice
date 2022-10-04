@@ -14,9 +14,9 @@ namespace DynamicPrice.Controllers
         }
         public IActionResult Index()
         {
-            List<CexDatum> cexData = _context.CexData.ToList();
+            List<CexDatum> dynamicprice = _context.Dynamicprice.ToList();
 
-            return View(cexData);
+            return View(dynamicprice);
         }
     }
 }
