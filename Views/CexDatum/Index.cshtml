@@ -1,0 +1,119 @@
+﻿@model IEnumerable<DynamicPrice.Models.CexDatum>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Column0)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BoxName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BoxCategory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stkqty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Slsqty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Buysqty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cashbuyprice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Exchangeprice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datadt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prevsellprice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sellprice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PredictSellpriceStandard)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PredictSellpriceNormalisation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PredictSellprice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PredictCurrent)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Column0)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BoxName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BoxCategory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stkqty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Slsqty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Buysqty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cashbuyprice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Exchangeprice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Datadt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prevsellprice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sellprice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PredictSellpriceStandard)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PredictSellpriceNormalisation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PredictSellprice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PredictCurrent)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Boxid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Boxid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Boxid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
