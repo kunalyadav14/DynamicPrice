@@ -1,12 +1,19 @@
-﻿@model IEnumerable<DynamicPrice.Models.CexDatum>
+﻿@model IEnumerable<DynamicPrice.Models.Dynamicprice>
 
 @{
     ViewData["Title"] = "Index";
+    Pager pager = new Pager();
+    int pageNo = 0;
+    if( ViewBag.Pager != null)
+    {
+        pager = ViewBag.Pager;
+        pageNo = pager.CurrentPage;
+    }
 }
 
 <h1>Index</h1>
 
-
+<partial name="_pager" model="@pager" />
 <style>
         table, th, td {
             border: 1px solid black;
@@ -111,11 +118,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.PredictCurrent)
             </td>
-            <td>
+            @*<td>
                 <a asp-action="Edit" asp-route-id="@item.Boxid">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Boxid">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Boxid">Delete</a>
-            </td>
+            </td>*@
         </tr>
 }
     </tbody>

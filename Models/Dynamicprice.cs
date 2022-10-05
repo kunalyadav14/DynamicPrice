@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace DynamicPrice.Models
 {
  
-    public partial class CexDatum
+    public partial class Dynamicprice
     {
         [Column("Column 0")]
         [StringLength(50)]
