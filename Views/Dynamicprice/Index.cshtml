@@ -2,9 +2,10 @@
 
 @{
     ViewData["Title"] = "Index";
+    int intSno = 0;
     Pager pager = new Pager();
     int pageNo = 0;
-    if( ViewBag.Pager != null)
+    if (ViewBag.Pager != null)
     {
         pager = ViewBag.Pager;
         pageNo = pager.CurrentPage;
@@ -14,31 +15,45 @@
 <h1>Index</h1>
 
 <partial name="_pager" model="@pager" />
+<div class="col-4 p-0 justify-content-end">
+    <form asp-controller="Dynamicprice" asp-action="Index">
+        <span class="btn-group">
+            <input class="form-control" type="text" name="SearchText" placeholder="Search key" />   
+            <input class="p-1 col-md-12 btn btn-sm btn-info" type="submit" value="Search" />
+        </span>
+    </form>
+</div>
 <style>
-        table, th, td {
-            border: 1px solid black;
-        }
-    </style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Column0)
+                Sno
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Boxid)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.BoxName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.BoxCategory)
+                @Html.DisplayNameFor(model => model.Category)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Stkqty)
+                @Html.DisplayNameFor(model => model.Stock)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Slsqty)
+                @Html.DisplayNameFor(model => model.SellCount)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Buysqty)
+                @Html.DisplayNameFor(model => model.BuyCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sell)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Cashbuyprice)
@@ -47,49 +62,46 @@
                 @Html.DisplayNameFor(model => model.Exchangeprice)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.PrevPrice)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Datadt)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Prevsellprice)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Sellprice)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PredictSellpriceStandard)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PredictSellpriceNormalisation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PredictSellprice)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PredictCurrent)
+                @Html.DisplayNameFor(model => model.Column11)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
+    intSno = intSno + 1;
+
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Column0)
+                    @intSno
             </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Boxid)
+            </td width="20%">
             <td>
                 @Html.DisplayFor(modelItem => item.BoxName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.BoxCategory)
+                @Html.DisplayFor(modelItem => item.Category)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Stkqty)
+                @Html.DisplayFor(modelItem => item.Stock)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Slsqty)
+                @Html.DisplayFor(modelItem => item.SellCount)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Buysqty)
+                @Html.DisplayFor(modelItem => item.BuyCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sell)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Cashbuyprice)
@@ -98,31 +110,19 @@
                 @Html.DisplayFor(modelItem => item.Exchangeprice)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.PrevPrice)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Datadt)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Prevsellprice)
+                @Html.DisplayFor(modelItem => item.Column11)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Sellprice)
+                <a asp-action="Edit" asp-route-id="@item.Boxid">Edit</a> 
+                @*<a asp-action="Details" asp-route-id="@item.Boxid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Boxid">Delete</a>*@
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PredictSellpriceStandard)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PredictSellpriceNormalisation)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PredictSellprice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PredictCurrent)
-            </td>
-            @*<td>
-                <a asp-action="Edit" asp-route-id="@item.Boxid">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Boxid">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Boxid">Delete</a>
-            </td>*@
         </tr>
 }
     </tbody>
