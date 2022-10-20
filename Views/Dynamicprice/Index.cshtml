@@ -34,8 +34,11 @@
             <th>
                 Sno
             </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Sno)
+            </th>
             <th>
-                @Html.DisplayNameFor(model => model.Boxid)
+                @Html.DisplayNameFor(model => model.BoxId)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.BoxName)
@@ -44,32 +47,132 @@
                 @Html.DisplayNameFor(model => model.Category)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Stock)
+                @Html.DisplayNameFor(model => model.TotalStock)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SellCount)
+                @Html.DisplayNameFor(model => model.Brand)
+            </th>
+           @* <th>
+                @Html.DisplayNameFor(model => model.CashBuyPrice)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.ExchangePrice)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.BuyCount)
+                @Html.DisplayNameFor(model => model.SellPrice)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Sell)
+                @Html.DisplayNameFor(model => model.P1sellPrice)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Cashbuyprice)
+                @Html.DisplayNameFor(model => model.P2sellPrice)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Exchangeprice)
+                @Html.DisplayNameFor(model => model.P1Dt)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.PrevPrice)
+                @Html.DisplayNameFor(model => model.P2Dt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P3Dt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SellQty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P1sellQty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P2sellQty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BuyQty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P1buyQty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P2buyQty)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Datadt)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Column11)
+                @Html.DisplayNameFor(model => model.P1Date)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P2Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P1Days)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P2Days)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P1sellRatio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P2sellRatio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SellRatio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P1buyRatio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P2buyRatio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BuyRatio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P1sellPriceDelta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P2sellPriceDelta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P1sellQtyDelta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P2sellQtyDelta)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.P1buyQtyDelta)
+            </th>
+            
+             <th>
+                @Html.DisplayNameFor(model => model.P2buyQtyDelta)
+            </th>
+            
+             <th>
+                @Html.DisplayNameFor(model => model.CategoryCode)
+            </th>
+            
+             <th>
+                @Html.DisplayNameFor(model => model.BrandCode)
+            </th>
+            
+             <th>
+                @Html.DisplayNameFor(model => model.PricingModel)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.PricingDelta)
+            </th>
+            
+             <th>
+                @Html.DisplayNameFor(model => model.Mlpredicted)
+            </th>
+            
+             <th>
+                @Html.DisplayNameFor(model => model.Tfpredicted)
+            </th>
+            
+             
+            
+          
             <th></th>
         </tr>
     </thead>
@@ -83,7 +186,10 @@
                     @intSno
             </td>
             <td>
-                    @Html.DisplayFor(modelItem => item.Boxid)
+                    @Html.DisplayFor(modelItem => item.Sno)
+            </td width="20%">
+            <td>
+                    @Html.DisplayFor(modelItem => item.BoxId)
             </td width="20%">
             <td>
                 @Html.DisplayFor(modelItem => item.BoxName)
@@ -92,34 +198,131 @@
                 @Html.DisplayFor(modelItem => item.Category)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Stock)
+                @Html.DisplayFor(modelItem => item.TotalStock)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SellCount)
+                @Html.DisplayFor(modelItem => item.Brand)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.CashBuyPrice)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.ExchangePrice)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.BuyCount)
+                @Html.DisplayFor(modelItem => item.SellPrice)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Sell)
+                @Html.DisplayFor(modelItem => item.P1sellPrice)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Cashbuyprice)
+                @Html.DisplayFor(modelItem => item.P2sellPrice)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Exchangeprice)
+                @Html.DisplayFor(modelItem => item.P1Dt)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PrevPrice)
+                @Html.DisplayFor(modelItem => item.P2Dt)
             </td>
-            <td>
+             <td>
+                @Html.DisplayFor(modelItem => item.P3Dt)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.SellQty)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.P1sellQty)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.P2sellQty)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.BuyQty)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.P1buyQty)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.P2buyQty)
+            </td>
+             <td>
                 @Html.DisplayFor(modelItem => item.Datadt)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Column11)
+             <td>
+                @Html.DisplayFor(modelItem => item.P1Date)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.P2Date)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.P3Date)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.P1Days)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.P2Days)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.P1sellRatio)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.P2sellRatio)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.SellRatio)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.P1buyRatio)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.P2buyRatio)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.BuyRatio)
+            </td>
+            
+             <td>
+                @Html.DisplayFor(modelItem => item.P1sellPriceDelta)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.P2sellPriceDelta)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.P1sellQtyDelta)
+            </td>
+            
+            
+             <td>
+                @Html.DisplayFor(modelItem => item.P2sellQtyDelta)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.P1buyQtyDelta)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Boxid">Edit</a> 
+                @Html.DisplayFor(modelItem => item.P2buyQtyDelta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrandCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PricingModel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PricingDelta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mlpredicted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tfpredicted)
+            </td>
+            
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.BoxId">Edit</a> 
                 @*<a asp-action="Details" asp-route-id="@item.Boxid">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Boxid">Delete</a>*@
             </td>

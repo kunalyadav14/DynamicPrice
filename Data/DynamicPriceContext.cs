@@ -30,7 +30,7 @@ namespace DynamicPrice.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Dynamicprice>().HasKey(u => u.Boxid);
+            modelBuilder.Entity<Dynamicprice>().HasKey(u => u.BoxId);
             OnModelCreatingPartial(modelBuilder);
         }
 

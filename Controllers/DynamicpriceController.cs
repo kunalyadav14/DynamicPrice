@@ -24,7 +24,7 @@ namespace DynamicPrice.Controllers
             List<Dynamicprice> dynamicprice; 
             if(SearchText != "" && SearchText != null)
             {
-                dynamicprice = _context.Dynamicprice.Where(x => x.BoxName.Contains(SearchText)).ToList();
+                dynamicprice = _context.Dynamicprice.Where(u => u.BoxName.Contains(SearchText)).ToList();
 
             }
             else
@@ -35,7 +35,7 @@ namespace DynamicPrice.Controllers
         [HttpGet]
         public IActionResult Edit(string Id)
         {
-            Dynamicprice dynamicprice = _context.Dynamicprice.Where(u => u.Boxid == Id).FirstOrDefault();
+            Dynamicprice dynamicprice = _context.Dynamicprice.Where(u => u.BoxId == Id).FirstOrDefault();
             return View(dynamicprice);
         }
         [HttpPost]

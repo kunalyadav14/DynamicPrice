@@ -12,7 +12,7 @@
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Boxid" />
+            <input type="hidden" asp-for="BoxId" />
             <div class="form-group">
                 <label asp-for="BoxName" class="control-label"></label>
                 <input asp-for="BoxName" class="form-control" />
@@ -24,49 +24,49 @@
                 <span asp-validation-for="Category" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Stock" class="control-label"></label>
-                <input asp-for="Stock" class="form-control" />
-                <span asp-validation-for="Stock" class="text-danger"></span>
+                <label asp-for="TotalStock" class="control-label"></label>
+                <input asp-for="TotalStock" class="form-control" />
+                <span asp-validation-for="TotalStock" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="SellCount" class="control-label"></label>
-                <input asp-for="SellCount" class="form-control" />
-                <span asp-validation-for="SellCount" class="text-danger"></span>
+                <label asp-for="Brand" class="control-label"></label>
+                <input asp-for="Brand" class="form-control" />
+                <span asp-validation-for="Brand" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="BuyCount" class="control-label"></label>
-                <input asp-for="BuyCount" class="form-control" />
-                <span asp-validation-for="BuyCount" class="text-danger"></span>
+                <label asp-for="CashBuyPrice" class="control-label"></label>
+                <input asp-for="CashBuyPrice" class="form-control" />
+                <span asp-validation-for="CashBuyPrice" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Sell" class="control-label"></label>
-                <input asp-for="Sell" class="form-control" />
-                <span asp-validation-for="Sell" class="text-danger"></span>
+                <label asp-for="ExchangePrice" class="control-label"></label>
+                <input asp-for="ExchangePrice" class="form-control" />
+                <span asp-validation-for="ExchangePrice" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Cashbuyprice" class="control-label"></label>
-                <input asp-for="Cashbuyprice" class="form-control" />
-                <span asp-validation-for="Cashbuyprice" class="text-danger"></span>
+                <label asp-for="SellPrice" class="control-label"></label>
+                <input asp-for="SellPrice" class="form-control" />
+                <span asp-validation-for="SellPrice" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Exchangeprice" class="control-label"></label>
-                <input asp-for="Exchangeprice" class="form-control" />
-                <span asp-validation-for="Exchangeprice" class="text-danger"></span>
+                <label asp-for="P1sellPrice" class="control-label"></label>
+                <input asp-for="P1sellPrice" class="form-control" />
+                <span asp-validation-for="P1sellPrice" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PrevPrice" class="control-label"></label>
-                <input asp-for="PrevPrice" class="form-control" />
-                <span asp-validation-for="PrevPrice" class="text-danger"></span>
+                <label asp-for="P2sellPrice" class="control-label"></label>
+                <input asp-for="P2sellPrice" class="form-control" />
+                <span asp-validation-for="P2sellPrice" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Datadt" class="control-label"></label>
-                <input asp-for="Datadt" class="form-control" />
-                <span asp-validation-for="Datadt" class="text-danger"></span>
+                <label asp-for="P1Dt" class="control-label"></label>
+                <input asp-for="P1Dt" class="form-control" />
+                <span asp-validation-for="P1Dt" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Column11" class="control-label"></label>
-                <input asp-for="Column11" class="form-control" />
-                <span asp-validation-for="Column11" class="text-danger"></span>
+                <label asp-for="P2Dt" class="control-label"></label>
+                <input asp-for="P2Dt" class="form-control" />
+                <span asp-validation-for="P2Dt" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
