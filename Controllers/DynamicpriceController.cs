@@ -2,6 +2,7 @@
 using DynamicPrice.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Drawing.Drawing2D;
 
 namespace DynamicPrice.Controllers
 {

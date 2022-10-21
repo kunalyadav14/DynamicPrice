@@ -12,7 +12,7 @@
     }
 }
 
-<h1>Index</h1>
+<h1>Dynamic Price</h1>
 
 <partial name="_pager" model="@pager" />
 <div class="col-4 p-0 justify-content-end">
@@ -34,9 +34,9 @@
             <th>
                 Sno
             </th>
-             <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.Sno)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.BoxId)
             </th>
@@ -52,7 +52,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Brand)
             </th>
-           @* <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.CashBuyPrice)
             </th>*@
             <th>
@@ -61,7 +61,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.SellPrice)
             </th>
-            <th>
+           @* <th>
                 @Html.DisplayNameFor(model => model.P1sellPrice)
             </th>
             <th>
@@ -75,20 +75,20 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.P3Dt)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.SellQty)
             </th>
-            <th>
+           @* <th>
                 @Html.DisplayNameFor(model => model.P1sellQty)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.P2sellQty)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.BuyQty)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.P1buyQty)
             </th>
             <th>
@@ -114,20 +114,20 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.P2sellRatio)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.SellRatio)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.P1buyRatio)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.P2buyRatio)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.BuyRatio)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.P1sellPriceDelta)
             </th>
             <th>
@@ -141,9 +141,9 @@
             </th>
              <th>
                 @Html.DisplayNameFor(model => model.P1buyQtyDelta)
-            </th>
+            </th>*@
             
-             <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.P2buyQtyDelta)
             </th>
             
@@ -160,7 +160,7 @@
             </th>
              <th>
                 @Html.DisplayNameFor(model => model.PricingDelta)
-            </th>
+            </th>*@
             
              <th>
                 @Html.DisplayNameFor(model => model.Mlpredicted)
@@ -169,6 +169,7 @@
              <th>
                 @Html.DisplayNameFor(model => model.Tfpredicted)
             </th>
+           
             
              
             
@@ -185,9 +186,9 @@
             <td>
                     @intSno
             </td>
-            <td>
+           @* <td>
                     @Html.DisplayFor(modelItem => item.Sno)
-            </td width="20%">
+            </td width="20%">*@
             <td>
                     @Html.DisplayFor(modelItem => item.BoxId)
             </td width="20%">
@@ -212,7 +213,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.SellPrice)
             </td>
-            <td>
+           @* <td>
                 @Html.DisplayFor(modelItem => item.P1sellPrice)
             </td>
             <td>
@@ -226,20 +227,20 @@
             </td>
              <td>
                 @Html.DisplayFor(modelItem => item.P3Dt)
-            </td>
+            </td>*@
              <td>
                 @Html.DisplayFor(modelItem => item.SellQty)
             </td>
-             <td>
+            @* <td>
                 @Html.DisplayFor(modelItem => item.P1sellQty)
             </td>
              <td>
                 @Html.DisplayFor(modelItem => item.P2sellQty)
-            </td>
+            </td>*@
              <td>
                 @Html.DisplayFor(modelItem => item.BuyQty)
             </td>
-             <td>
+             @*<td>
                 @Html.DisplayFor(modelItem => item.P1buyQty)
             </td>
              <td>
@@ -268,21 +269,21 @@
             </td>
              <td>
                 @Html.DisplayFor(modelItem => item.P2sellRatio)
-            </td>
+            </td>*@
              <td>
                 @Html.DisplayFor(modelItem => item.SellRatio)
             </td>
-             <td>
+             @*<td>
                 @Html.DisplayFor(modelItem => item.P1buyRatio)
             </td>
              <td>
                 @Html.DisplayFor(modelItem => item.P2buyRatio)
-            </td>
+            </td>*@
              <td>
                 @Html.DisplayFor(modelItem => item.BuyRatio)
             </td>
             
-             <td>
+            @* <td>
                 @Html.DisplayFor(modelItem => item.P1sellPriceDelta)
             </td>
              <td>
@@ -313,7 +314,7 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.PricingDelta)
-            </td>
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.Mlpredicted)
             </td>
@@ -321,11 +322,17 @@
                 @Html.DisplayFor(modelItem => item.Tfpredicted)
             </td>
             
-            <td>
+             <td>
+                    <div class="w-75 btn-group " role="group">
+                            <a asp-controller="Dynamicprice" asp-action="Edit" asp-route-id="@item.BoxId" class="btn btn-primary mx-2" >  <i class="bi bi-pencil-square"></i>Edit</a>
+                           @*<a asp-controller="Category" asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-danger mx-2">  <i class="bi bi-trash-fill"></i>Delete</a>*@
+                    </div>
+             </td>
+            @*<td>
                 <a asp-action="Edit" asp-route-id="@item.BoxId">Edit</a> 
                 @*<a asp-action="Details" asp-route-id="@item.Boxid">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Boxid">Delete</a>*@
-            </td>
+                <a asp-action="Delete" asp-route-id="@item.Boxid">Delete</a>
+            </td>*@
         </tr>
 }
     </tbody>
