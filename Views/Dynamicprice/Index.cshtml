@@ -41,7 +41,7 @@
                 @Html.DisplayNameFor(model => model.BoxId)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.BoxName)
+                @Html.DisplayNameFor(model => model.Box_Name)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Category)
@@ -115,18 +115,18 @@
             <th>
                 @Html.DisplayNameFor(model => model.P2sellRatio)
             </th>*@
-            <th>
+          @*  <th>
                 @Html.DisplayNameFor(model => model.SellRatio)
-            </th>
+            </th>*@
             @*<th>
                 @Html.DisplayNameFor(model => model.P1buyRatio)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.P2buyRatio)
             </th>*@
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.BuyRatio)
-            </th>
+            </th>*@
             @*<th>
                 @Html.DisplayNameFor(model => model.P1sellPriceDelta)
             </th>
@@ -163,11 +163,11 @@
             </th>*@
             
              <th>
-                @Html.DisplayNameFor(model => model.Mlpredicted)
+                @Html.DisplayNameFor(model => model.PredictedPrice)
             </th>
             
              <th>
-                @Html.DisplayNameFor(model => model.Tfpredicted)
+                @Html.DisplayNameFor(model => model.PredictedPrice_ML)
             </th>
            
             
@@ -193,7 +193,7 @@
                     @Html.DisplayFor(modelItem => item.BoxId)
             </td width="20%">
             <td>
-                @Html.DisplayFor(modelItem => item.BoxName)
+                @Html.DisplayFor(modelItem => item.Box_Name)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Category)
@@ -270,18 +270,18 @@
              <td>
                 @Html.DisplayFor(modelItem => item.P2sellRatio)
             </td>*@
-             <td>
+            @* <td>
                 @Html.DisplayFor(modelItem => item.SellRatio)
-            </td>
+            </td>*@
              @*<td>
                 @Html.DisplayFor(modelItem => item.P1buyRatio)
             </td>
              <td>
                 @Html.DisplayFor(modelItem => item.P2buyRatio)
             </td>*@
-             <td>
+           @*  <td>
                 @Html.DisplayFor(modelItem => item.BuyRatio)
-            </td>
+            </td>*@
             
             @* <td>
                 @Html.DisplayFor(modelItem => item.P1sellPriceDelta)
@@ -316,10 +316,9 @@
                 @Html.DisplayFor(modelItem => item.PricingDelta)
             </td>*@
             <td>
-                @Html.DisplayFor(modelItem => item.Mlpredicted)
-            </td>
+                @Html.DisplayFor(modelItem => item.PredictedPrice)
             <td>
-                @Html.DisplayFor(modelItem => item.Tfpredicted)
+                @Html.DisplayFor(modelItem => item.PredictedPrice_ML)
             </td>
             
              <td>

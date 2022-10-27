@@ -25,7 +25,7 @@ namespace DynamicPrice.Controllers
             List<Dynamicprice> dynamicprice; 
             if(SearchText != "" && SearchText != null)
             {
-                dynamicprice = _context.Dynamicprice.Where(u => u.BoxName.Contains(SearchText)).ToList();
+                dynamicprice = _context.Dynamicprice.Where(u => u.Box_Name.Contains(SearchText)).ToList();
 
             }
             else
@@ -47,5 +47,20 @@ namespace DynamicPrice.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
+        //public IActionResult Edit(Dynamicprice dynamicprice)
+        //{
+        //    if (dynamicprice.Box_Name == dynamicprice.PredictedPrice_ML.ToString())
+        //    {
+        //        ModelState.AddModelError("name", "The DisplayOrder annot  exactly match the Name.");
+        //    }
+        //    if (ModelState.IsValid)
+        //    {
+        //        _context.Dynamicprice.Update(dynamicprice);
+        //        _context.SaveChanges();
+        //        TempData["Success"] = "Category edited Successfully";
+        //        return RedirectToAction("Index");
+        //    }
+        //    return RedirectToAction("Index");
+        //}
     }
 }
